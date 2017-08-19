@@ -9,6 +9,17 @@
 ### 2.2 安装nginx
 进入到nginx的home目录中，使用如下命令：
 
+```java
+./configure --prefix=/usr/local/nginx
+
 ```
- ./configure --prefix=/usr/local/nginx
+可能会出现如下的错误信息：
+
+```java
+./configure: error: the HTTP gzip module requires the zlib library.
+You can either disable the module by using --without-http_gzip_module
+option, or install the zlib library into the system, or build the zlib library
+statically from the source with nginx by using --with-zlib=<path> option.
+
 ```
+注意：这里提示的是需要安装zlib库，因为nginx的http_gzip_module需要改库
