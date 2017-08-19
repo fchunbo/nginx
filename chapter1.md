@@ -38,3 +38,30 @@ Nothing to do
 
     注意：安装nginx很可能会首先出现要求安装pcre库，使用上述同样的方法，即可解决。
     
+`./configure --prefix=/usr/local/nginx`后，就可以使用`make && make install`来安装nginx.
+
+nginx安装目录信息如下：
+```
+  nginx path prefix: "/usr/local/nginx"
+  nginx binary file: "/usr/local/nginx/sbin/nginx"
+  nginx modules path: "/usr/local/nginx/modules"
+  nginx configuration prefix: "/usr/local/nginx/conf"
+  nginx configuration file: "/usr/local/nginx/conf/nginx.conf"
+  nginx pid file: "/usr/local/nginx/logs/nginx.pid"
+  nginx error log file: "/usr/local/nginx/logs/error.log"
+  nginx http access log file: "/usr/local/nginx/logs/access.log"
+  nginx http client request body temporary files: "client_body_temp"
+  nginx http proxy temporary files: "proxy_temp"
+  nginx http fastcgi temporary files: "fastcgi_temp"
+  nginx http uwsgi temporary files: "uwsgi_temp"
+  nginx http scgi temporary files: "scgi_temp"
+```
+
+在`/usr/local/nginx`目录下有如下目录：
+```
+drwxr-xr-x. 2 root root 4096 Aug 19 10:36 conf #配置文件
+drwxr-xr-x. 2 root root   40 Aug 19 10:36 html #网页文件
+drwxr-xr-x. 2 root root    6 Aug 19 10:36 logs #日志文件
+drwxr-xr-x. 2 root root   19 Aug 19 10:36 sbin #主要的二进制文件
+```
+
