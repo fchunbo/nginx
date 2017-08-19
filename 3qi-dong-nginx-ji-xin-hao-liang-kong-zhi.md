@@ -21,6 +21,30 @@ nginx
 |-t [path to config]|不运行，而仅仅测试配置文件。nginx 将检查配置文件的语法的正确性，并尝试打开配置文件中所引用到的文件|
 
 ### 2.Nginx的信号量控制
-Nginx的启停等操作有两种操作方式，一是使用参数形式，使用`-s`参数执行信号；二是使用`kill`
+Nginx的启停等操作有两种操作方式，一是使用参数形式，使用`-s`参数执行信号；二是使用`kill`命令设置信号量。
+
 #### 2.1 nginx的信号控制方式一
+首先介绍使用参数形式启停Nginx的。这种方式，主要是在启动Nginx的时候，使用`-s`参数，语法格式如下：
+```
+./nginx -s signal
+```
+
+注意：signal值如下：
+
+|signal|meaning|
+|-|-|
+|stop|fast shutdown(快速关机)|
+|quit|gracful shutdown(优雅关机)|
+|reload|reloading the configuration file(重新加载配置文件)|
+|reopen|reopening the logs file(重新打开日志文件)|
+
+#### 2.2 nginx的信号量控制方式二
+这里介绍使用`kill`命令对nginx进行信号量控制。语法格式如下：
+
+```
+kill -SIGNAL NginxPid
+```
+
+
+
 
