@@ -9,17 +9,32 @@
 ### 2.2 安装nginx
 进入到nginx的home目录中，使用如下命令：
 
-```java
+```
 ./configure --prefix=/usr/local/nginx
 
 ```
 可能会出现如下的错误信息：
 
-```java
+```
 ./configure: error: the HTTP gzip module requires the zlib library.
 You can either disable the module by using --without-http_gzip_module
 option, or install the zlib library into the system, or build the zlib library
 statically from the source with nginx by using --with-zlib=<path> option.
 
 ```
-注意：这里提示的是需要安装zlib库，因为nginx的http_gzip_module需要改库
+注意：这里提示的是需要安装zlib库，因为nginx的http_gzip_module需要改库。
+然而使用`yum install -y zlib`安装zlib库时，出现如下信息：
+```
+[root@localhost nginx-1.12.1]# yum install -y zlib
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: centos.ustc.edu.cn
+ * extras: mirrors.cqu.edu.cn
+ * updates: centos.ustc.edu.cn
+Package zlib-1.2.7-17.el7.x86_64 already installed and latest version
+Nothing to do
+```
+表明，zlib库已经安装了，但为什么安装nginx提示要安装zlib库呢？这是因为还需要安装对应的zlib-devel库。使用`yum install -y zlib-devel`安装zlib-devel即可。
+
+    注意：安装nginx很可能会首先出现要求安装pcre库，使用上述同样的方法，即可解决。
+    
