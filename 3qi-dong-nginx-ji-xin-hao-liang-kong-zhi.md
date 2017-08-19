@@ -45,6 +45,19 @@ Nginx的启停等操作有两种操作方式，一是使用参数形式，使用
 kill -SIGNAL NginxPid
 ```
 
+注意：Nginx的PID文件为`/usr/local/nginx/logs/nginx.pid`，该文件存放了已经启动的nginx的pid。
+
+Nginx的信号量如下：
+
+|SIGNAL|MEANING|
+|-|-|
+|TERM,INT|fast shutdown(快速关机)|
+|QUIT|graceful shutdown(优雅关机)|
+|HUP|changing configuration, keeping up with a changed time zone (only for FreeBSD and Linux), starting new worker processes with a new configuration, graceful shutdown of old worker processes|
+|USR1|reopening the logs files|
+|USR2|upgrading an executable file|
+|WINCH|raceful shutdown of worker processes(优雅的关闭所有工作进程)
+
 
 
 
