@@ -31,12 +31,12 @@ Nginx的启停等操作有两种操作方式，一是使用参数形式，使用
 
 注意：signal值如下：
 
-|signal|meaning|
+| signal | meaning |
 |-|-|
-|stop|fast shutdown(快速关机)|
-|quit|gracful shutdown(优雅关机)|
-|reload|reloading the configuration file(重新加载配置文件)|
-|reopen|reopening the logs file(重新打开日志文件)|
+| stop | fast shutdown(快速关机) |
+| quit | gracful shutdown(优雅关机) |
+| reload | reloading the configuration file(重新加载配置文件) |
+| reopen | reopening the logs file(重新打开日志文件) |
 
 #### 2.2 nginx的信号量控制方式二
 这里介绍使用`kill`命令对nginx进行信号量控制。语法格式如下：
