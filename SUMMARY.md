@@ -7,5 +7,5 @@
 * [5.虚拟主机配置](5nginx_virtual_host_conf.md)
 * [6.nginx的日志管理](6nginx_log_management.md)
 * [7.nginx内置变量](7nginx_build_in_vars.md)
-* 8.Location语法
+* [8.Location语法](8locationyu-fa.md)
 
