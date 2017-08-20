@@ -141,6 +141,7 @@ http {#这是配置http服务器的主要段
 
 ![alt 基于域名的虚拟主机配置](/images/nginx_domain_virtual.png)
 
+        注意：这里需要配置host，如果是自己的域名就不需要配置host
 ### 3.基于端口的虚拟主机配置
 ```
    #基于端口的虚拟主机配置
