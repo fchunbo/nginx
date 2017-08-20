@@ -1,1 +1,0 @@
-# Nginx Location Synx
