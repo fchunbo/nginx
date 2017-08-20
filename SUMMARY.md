@@ -4,5 +4,5 @@
 * [2.编译安装](2nginx_install.md)
 * [3.简单介绍Nginx工作方式](3nginx_introduce_work_method.md)
 * [4.启动Nginx及信号量控制](4nginx_signal_controll.md)
-* 5.虚拟主机配置
+* [5.虚拟主机配置](5xu-ni-zhu-ji-pei-zhi.md)
 
