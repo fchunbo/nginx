@@ -1,5 +1,6 @@
 # 虚拟主机配置
 
+### 1.默认的nginx.conf文件
 首先给出nginx的默认的配置文件如下：
 ```
 #user  nobody;
@@ -36,7 +37,8 @@ http {#这是配置http服务器的主要段
     keepalive_timeout  65;
 
     #gzip  on;
-
+    server { #这是虚拟主机配置的地方
+        listen 80;
         server_name  localhost;
 
         #charset koi8-r;
@@ -119,4 +121,33 @@ http {#这是配置http服务器的主要段
     #}
 
 }
+```
+
+### 2.基于域名的虚拟主机配置
+```
+   #基于域名的虚拟主机配置
+    server{
+        listen 80;
+        server_name z.com;
+
+        location / {
+                root z.com;#这里是相对路径，相对于nginx的安装目录
+                index index.html;
+
+        }
+    }
+```
+
+### 3.基于端口的虚拟主机配置
+```
+   #基于端口的虚拟主机配置
+   server{
+        listen 2022;
+        server_name z.com;
+
+        location / {
+                root /var/www/html;#注意这里是绝对路径
+                index index.html;
+        }
+   }
 ```
