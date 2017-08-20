@@ -154,6 +154,9 @@ http {#这是配置http服务器的主要段
         }
    }
 ```
+效果如下：
+
+![alt 基于端口的虚拟主机配置](/images/nginx_port_virtual.png)
 
 ### 4.基于IP的虚拟主机配置
 
@@ -169,3 +172,7 @@ http {#这是配置http服务器的主要段
         }
     }
 ```
+效果如下：
+![alt 基于ip的虚拟主机配置](/images/nginx_ip_virtual.png)
+
+
