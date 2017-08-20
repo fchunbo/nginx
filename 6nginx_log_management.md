@@ -51,4 +51,25 @@ log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
 kill -HUP `cat /usr/local/nginx/logs/nginx.pid`
 ```
 命令就可以重新加载配置文件了。
+这样访问 [http://z.com]() 就可以在logs下面找到z.com.access.log文件了。
+```
+[root@localhost nginx]# cd logs/
+[root@localhost logs]# ll
+total 24
+-rw-r--r--. 1 root root 8583 Aug 19 23:34 access.log
+-rw-r--r--. 1 root root 2610 Aug 19 23:34 error.log
+-rw-r--r--. 1 root root    6 Aug 19 21:53 nginx.pid
+-rw-r--r--. 1 root root  598 Aug 19 23:34 z.com.access.log
+```
 
+查看z.com.access.log日志文件的内容如下：
+```
+[root@localhost logs]# cat z.com.access.log 
+192.168.60.1 - - [19/Aug/2017:23:34:54 -0400] "GET / HTTP/1.1" 200 148 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko" "-"
+192.168.60.1 - - [19/Aug/2017:23:34:56 -0400] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko" "-"
+192.168.60.1 - - [19/Aug/2017:23:34:57 -0400] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko" "-"
+192.168.60.1 - - [19/Aug/2017:23:34:57 -0400] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko" "-"
+192.168.60.1 - - [19/Aug/2017:23:35:24 -0400] "GET / HTTP/1.1" 200 148 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko" "-"
+192.168.60.1 - - [19/Aug/2017:23:39:56 -0400] "GET / HTTP/1.1" 200 148 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko" "-"
+```
+这就是访问z.com的日志。
