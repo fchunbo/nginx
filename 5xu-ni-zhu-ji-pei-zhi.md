@@ -151,3 +151,18 @@ http {#这是配置http服务器的主要段
         }
    }
 ```
+
+### 4.基于IP的虚拟主机配置
+
+```
+    #基于ip的虚拟主机配置
+    server{
+        listen 80;
+        server_name 192.168.60.164;
+
+        location /{
+                root html/ip;
+                index index.html;
+        }
+    }
+```
