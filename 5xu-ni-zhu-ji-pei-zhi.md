@@ -161,7 +161,7 @@ http {#这是配置http服务器的主要段
         server_name 192.168.60.164;
 
         location /{
-                root html/ip;
+                root html/ip;#也是相对路径
                 index index.html;
         }
     }
