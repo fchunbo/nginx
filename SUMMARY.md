@@ -8,4 +8,5 @@
 * [6.nginx的日志管理](6nginx_log_management.md)
 * [7.nginx内置变量](7nginx_build_in_vars.md)
 * [8.nginx定时日志分割](8nginxding-shi-ri-zhi-fen-ge.md)
+* [9.nginx的location语法](9nginxde-location-yu-fa.md)
 
