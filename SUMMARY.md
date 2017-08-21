@@ -9,4 +9,5 @@
 * [7.nginx内置变量](7nginx_build_in_vars.md)
 * [8.nginx定时日志分割](8nginxding-shi-ri-zhi-fen-ge.md)
 * [9.nginx的location语法](9nginxde-location-yu-fa.md)
+* [10.nginx的location的正则匹配](10nginxde-location-de-zheng-ze-pi-pei.md)
 
