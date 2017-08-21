@@ -45,3 +45,10 @@ location = / {
 
 ```
 当再次访问主目录的时候，访问的就是nginx的欢迎页面，也就是经过内部转发，访问的是`/usr/local/nginx/html/index/html`.
+
+
+### 3.正则匹配
+
+
+### 4.总结
+![](/images/location的解析过程.png)
