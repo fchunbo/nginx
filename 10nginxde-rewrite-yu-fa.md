@@ -15,11 +15,13 @@ location / {
             #   return 403;
             #}
             
+            #进行正则匹配重写uri
             #if ($http_user_agent ~* msie){
             #   rewrite ^.*$ /ie.html;
             #   break;
             #}
 
+            #判断指定的文件是否存在
             if (!-e $document_root$fastcgi_script_name){
                 rewrite ^.*$ /404.html;
                 break;
